@@ -1,0 +1,28 @@
+.contextmenu * {
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    min-width: max-content;
+    box-sizing: border-box;
+}
+
+.contextmenu li {
+    list-style-type: none;
+}
+
+.contextmenu ul {
+    list-style-type: none;
+    place-items: stretch;
+}
+
+.contextmenu .contextmenu-node>.contextmenu-label+* {
+    display: none;
+    position: absolute;
+    transform: translate(0, 0);
+    left: 100%;
+    top: 0;
+}
+
+.contextmenu li:hover>.contextmenu-node {
+    display: block;
+}

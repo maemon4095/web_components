@@ -1,0 +1,52 @@
+.contextmenu * {
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    min-width: max-content;
+    box-sizing: border-box;
+}
+
+.contextmenu-level {
+    font: 1em menu;
+    border: solid 1px gray;
+    border-radius: 0.2em;
+    background-color: whitesmoke;
+}
+
+.contextmenu li {
+    list-style-type: none;
+    margin: 0.1em;
+}
+
+.contextmenu ul {
+    list-style-type: none;
+    place-items: stretch;
+}
+
+.contextmenu .contextmenu-label {
+    margin: 0 1em;
+}
+
+.contextmenu .contextmenu-label:not(:only-child)::after {
+    content: '>';
+    right: -0.25em;
+    position: absolute;
+    height: 1em;
+    width: 1em;
+}
+
+.contextmenu .contextmenu-node>.contextmenu-label+* {
+    display: none;
+    position: absolute;
+    transform: translate(0, 0);
+    left: 100%;
+    top: 0;
+}
+
+.contextmenu li:hover>.contextmenu-node {
+    display: block;
+}
+
+.contextmenu .contextmenu-group>*:not(:first-child) {
+    border-top: solid 1px gray;
+}
